@@ -1,8 +1,11 @@
 # Veracode Defender
 
+[![Deployed on Vercel](https://img.shields.io/badge/Vercel-deployed-0D1117?style=flat-square&logo=vercel&logoColor=white)](https://veracode-defender.vercel.app)
+[![Brand](https://img.shields.io/badge/Veracode-2026%20Brand-0065DD?style=flat-square)](https://www.veracode.com)
+
 A 2026 HTML5 rebuild of the 2012 Veracode Defender Flash game, retooled for the AI-coding era and aligned with current Veracode brand guidelines.
 
-**Play it live:** [veracode-defender.vercel.app](https://veracode-defender.vercel.app)
+> **▶ Play it live: [veracode-defender.vercel.app](https://veracode-defender.vercel.app)**
 
 ---
 
