@@ -1,0 +1,25 @@
+{
+  "name": "veracode-defender",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Veracode Defender — a 2026 HTML5 rebuild of the 2012 Flash original, themed for the AI-coding era.",
+  "scripts": {
+    "dev": "npx --yes http-server . -p 4590 -c-1 -o",
+    "deploy": "npx --yes vercel@latest deploy --prod --yes"
+  },
+  "homepage": "https://veracode-defender.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QforQSF/veracode-defender.git"
+  },
+  "keywords": [
+    "veracode",
+    "appsec",
+    "game",
+    "html5",
+    "canvas",
+    "marketing"
+  ],
+  "author": "Sam Houston (Veracode)",
+  "license": "SEE LICENSE IN LICENSE"
+}

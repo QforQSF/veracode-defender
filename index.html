@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Veracode Defender - Secure the future, one vulnerability at a time.">
+    <title>Veracode Defender</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logos/veracode-mark-white.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-shell">
+        <header id="game-header">
+            <a href="https://www.veracode.com" target="_blank" rel="noopener" aria-label="Veracode">
+                <img src="assets/logos/veracode-logo-white.svg" alt="Veracode" class="brand-logo">
+            </a>
+            <div class="tagline">We secure the future.</div>
+        </header>
+
+        <main id="game-stage">
+            <canvas id="game-canvas" width="960" height="540" aria-label="Veracode Defender game canvas"></canvas>
+
+            <div id="screen-start" class="screen active">
+                <div class="screen-inner">
+                    <img src="assets/logos/veracode-mark-white.svg" alt="" class="mark-hero">
+                    <h1 class="title">DEFENDER</h1>
+                    <p class="subtitle">Secure the application.<br>Defeat the vulnerabilities.</p>
+                    <div class="controls-card">
+                        <h3>Controls</h3>
+                        <ul>
+                            <li><kbd>&larr;</kbd><kbd>&uarr;</kbd><kbd>&darr;</kbd><kbd>&rarr;</kbd> or <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> &mdash; Move</li>
+                            <li><kbd>Space</kbd> &mdash; Fire scan</li>
+                            <li><kbd>Shift</kbd> &mdash; Deploy Package Firewall (1 per life)</li>
+                            <li><kbd>P</kbd> or <kbd>Esc</kbd> &mdash; Pause</li>
+                        </ul>
+                    </div>
+                    <button id="btn-start" class="btn-primary">Start Mission</button>
+                </div>
+            </div>
+
+            <div id="screen-pause" class="screen">
+                <div class="screen-inner">
+                    <h2 class="title-sm">Paused</h2>
+                    <p class="subtitle">Take a breath. The vulnerabilities aren&rsquo;t going anywhere.</p>
+                    <button id="btn-resume" class="btn-primary">Resume</button>
+                    <button id="btn-quit" class="btn-ghost">End Mission</button>
+                </div>
+            </div>
+
+            <div id="screen-gameover" class="screen">
+                <div class="screen-inner">
+                    <h2 class="title-sm">Mission Report</h2>
+                    <div class="report">
+                        <div class="stat"><span class="label">Final Score</span><span class="value" id="stat-score">0</span></div>
+                        <div class="stat"><span class="label">Waves Cleared</span><span class="value" id="stat-waves">0</span></div>
+                        <div class="stat"><span class="label">Threats Neutralized</span><span class="value" id="stat-kills">0</span></div>
+                    </div>
+                    <p class="subtitle">Ready to secure your real applications?<br>
+                        <a href="https://www.veracode.com" target="_blank" rel="noopener" class="cta-link">Learn how Veracode defends code in the AI era &rarr;</a>
+                    </p>
+                    <button id="btn-retry" class="btn-primary">Deploy Again</button>
+                </div>
+            </div>
+
+            <div id="hud" class="hud hidden" aria-hidden="true">
+                <div class="hud-row">
+                    <div class="hud-item"><span class="hud-label">SCORE</span><span id="hud-score">0</span></div>
+                    <div class="hud-item"><span class="hud-label">WAVE</span><span id="hud-wave">1</span></div>
+                    <div class="hud-item"><span class="hud-label">LIVES</span><span id="hud-lives">&diams;&diams;&diams;</span></div>
+                    <div class="hud-item"><span class="hud-label">FIREWALLS</span><span id="hud-firewalls">1</span></div>
+                </div>
+                <div id="hud-powerups" class="hud-powerups"></div>
+                <div id="hud-wave-banner" class="wave-banner"></div>
+            </div>
+        </main>
+
+        <footer id="game-footer">
+            <small>&copy; 2026 Veracode &middot; A world where software is developed secure from the start.</small>
+        </footer>
+    </div>
+
+    <script src="js/game.js" defer></script>
+</body>
+</html>
